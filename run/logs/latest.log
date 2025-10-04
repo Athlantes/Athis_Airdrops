@@ -1,0 +1,42 @@
+[12:07:01] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.8+9-LTS; Eclipse Adoptium Temurin-21.0.8+9) on Windows 11 10.0 (amd64)
+[12:07:01] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21-130-master@b1b5d4c (2024-08-10T10:02:42Z) for Minecraft 1.21
+[12:07:02] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[12:07:02] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'D:\Athis_Airdrops\build\libs\Athis Airdrops-0.3.0a.jar'...
+[12:07:03] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'D:\Athis_Airdrops\build\libs\Athis Airdrops-0.3.0a.jar' in 740ms.
+[12:07:03] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[12:07:03] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - AthisAirdrops (0.3.0a)
+[12:07:07] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[12:07:09] [ServerMain/INFO]: Loaded 1290 recipes
+[12:07:09] [ServerMain/INFO]: Loaded 1399 advancements
+[12:07:09] [Server thread/INFO]: Starting minecraft server version 1.21
+[12:07:09] [Server thread/INFO]: Loading properties
+[12:07:09] [Server thread/INFO]: This server is running Paper version 1.21-130-master@b1b5d4c (2024-08-10T10:02:42Z) (Implementing API version 1.21-R0.1-SNAPSHOT)
+[12:07:10] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[12:07:10] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[12:07:10] [Server thread/INFO]: Using 4 threads for Netty based IO
+[12:07:11] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 3 worker threads, and population gen parallelism of 3 threads
+[12:07:11] [Server thread/INFO]: Default game type: SURVIVAL
+[12:07:11] [Server thread/INFO]: Generating keypair
+[12:07:11] [Server thread/INFO]: Starting Minecraft server on *:25565
+[12:07:11] [Server thread/INFO]: Using default channel type
+[12:07:11] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[12:07:11] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[12:07:11] [Server thread/INFO]: [AthisAirdrops] Loading server plugin AthisAirdrops v0.3.0a
+[12:07:11] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[12:07:11] [Server thread/INFO]: Preparing level "world"
+[12:07:12] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[12:07:12] [Server thread/INFO]: Time elapsed: 806 ms
+[12:07:12] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[12:07:12] [Server thread/INFO]: Time elapsed: 158 ms
+[12:07:12] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[12:07:13] [Server thread/INFO]: Time elapsed: 69 ms
+[12:07:13] [Server thread/INFO]: [AthisAirdrops] Enabling AthisAirdrops v0.3.0a
+[12:07:13] [Server thread/INFO]: [AthisAirdrops] AirdropManager: cleaning up leftover armor stands/holograms...
+[12:07:13] [Server thread/INFO]: [AthisAirdrops] AthiSAirdrops has been enabled!
+[12:07:13] [Server thread/INFO]: [spark] Starting background profiler...
+[12:07:13] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[12:07:13] [Server thread/INFO]: Done preparing level "world" (1.751s)
+[12:07:13] [Server thread/INFO]: Running delayed init tasks
+[12:07:13] [Server thread/INFO]: Done (12.622s)! For help, type "help"
+[12:07:13] [Server thread/INFO]: Timings Reset

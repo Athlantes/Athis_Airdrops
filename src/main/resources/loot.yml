@@ -1,0 +1,95 @@
+common_lootcrate:
+  chance: 0.7  # 70% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    iron_ingot:
+      material: IRON_INGOT
+      min: 3
+      max: 8
+      chance: 0.8
+  commands:
+    creative:
+      name: "&eCreative Gamemode"
+      material: PAPER
+      amount: 1
+      console_commands:
+        - "gamemode creative %player%"
+      chance: 1
+      consume_on_use: true
+      cooldown_seconds: 60
+      lore:
+        - "&eGives you Creative!"
+        - ""
+        - "&7Right Click to redeem"
+    starter_bundle:
+      name: "&6Starter Bundle"
+      material: BUNDLE
+      amount: 1
+      # Commands to execute as console
+      console_commands:
+        - "give %player% minecraft:stone 64"
+        - "give %player% minecraft:oak_log 32"
+      # Commands to execute as player (optional)
+      player_commands:
+        - "say Hello %player%"
+      chance: 0.5
+      consume_on_use: true
+      cooldown_seconds: 300
+      lore:
+        - "&7Redeem to receive starter items"
+
+uncommon_drop:
+  chance: 0.3  # 30% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    diamond_sword:
+      material: DIAMOND_SWORD
+      min: 1
+      max: 1
+      chance: 0.4
+      enchantments:
+        SHARPNESS: 3
+        UNBREAKING: 2
+    golden_apple:
+      material: GOLDEN_APPLE
+      min: 1
+      max: 2
+      chance: 0.5
+  itemsadder_loot:
+    banana:
+      material: "iasurvival:banana"
+      min: 1
+      max: 1
+      chance: 0.6
+
+legendary_drop:
+  chance: 0.1  # 10% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    netherite_sword:
+      material: NETHERITE_SWORD
+      min: 1
+      max: 1
+      chance: 0.4
+  mmoitems_loot:
+    long_sword:
+      type: SWORD
+      id: LONG_SWORD
+      min: 1
+      max: 1
+      chance: 1.0
+    blaze_wand:
+      type: WAND
+      id: BLAZE_WAND
+      min: 1
+      max: 1
+      chance: 0.5
+  nexo_loot:
+    forest_axe:
+      nexo_id: "forest_axe"
+      min: 1
+      max: 1
+      chance: 1.0

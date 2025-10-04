@@ -1,0 +1,100 @@
+#Automatic start airdrops at server start (no need to run /airdrop start)
+autostart: false
+
+spawn_interval_seconds: 240 #Time between airdrops
+time-before-despawn: 120 #Airdrop duration
+
+# Maximum number of concurrent airdrops (including ones still falling)
+max_concurrent_airdrops: 3
+
+world: world
+center_x: 0
+center_z: 0
+spawn_radius: 1000
+max_location_attempts: 100
+min_players_to_spawn: 3 #Numbers of players needed online for airdrops to spawn
+
+#Airdrops will spawn only in chunks where are at least one player.
+spawn_in_loaded_chunks_only: false
+#Load the chunk where is the airdrop if no player is there (best with spawn_in_loaded_chunks_only: false)
+load_generated_chunk_if_unloaded: true
+
+replace_existing_block: true
+particle_interval_ticks: 10
+
+# Animation options
+animation:
+  enabled: true          # true = play drop animation; false = place chest immediately
+  height: 50             # starting height in blocks above target
+  interval_ticks: 2      # task interval in ticks (how often the armorstand teleports)
+  blocks_per_tick: 0.1   # blocks per tick the armorstand descends (speed)
+
+#Compass system | Players can right-click with a compass to get an approximate location to the airdrop
+enable-compass: true
+compass-cooldown: 10 # cooldown in seconds
+
+#Lock system | Players need to wait some time before they can loot the chest
+lock-airdrop: true
+time-before-unlock: 30 # in seconds
+
+# Hologram options - Don't modify if you don't know what you do
+hologram:
+  create_delay_ticks: 2
+  spawn_retries: 3
+  retry_delay_ticks: 10
+
+security:
+  spawn_cooldown_seconds: 15 # per-player cooldown for manual /airdrop spawn
+  block_hoppers_before_unlock: true # cancel hopper transfer if chest locked
+  deny_hopper_looting: true # prevent any hopper interaction with protected airdrops
+  max_manual_spawn_radius: 5000 # max distance from world spawn allowed for manual coordinate spawns (0 disables)
+  restrict_worlds: [] # if non-empty, only these worlds allow manual spawns
+  audit:
+    enabled: true
+    log_locked_open_attempts: true
+    log_break_attempts: true
+    log_hopper_moves: true
+
+messages:
+  airdrop_spawned: "[Airdrop] Something has fallen in the %biome%, roughly %distance% blocks from you..."
+  airdrop_despawned: "[Airdrop]§e Airdrop at %x%, %z% has despawned."
+  chest_protected: "[Airdrop]§c This chest cannot be broken!"
+  chest_empty_notice: "[Airdrop]§e That airdrop is empty."
+  compass_cooldown: "&cPlease wait %seconds% seconds before using the compass again."
+  no_active_airdrop: "&eThere is no active airdrop currently."
+  compass_location: "&aAirdrop is roughly %distance% blocks %direction% from you."
+  compass_coords: "&aAirdrop location: X: %x%, Y: %y%, Z: %z%"
+  chest_locked: "&cThis airdrop chest is locked. Please wait a bit."
+  autostart: "&aAirdrop system auto-started."
+  system_already_running: "&cAirdrop system already running."
+  system_not_running: "&cAirdrop system not running."
+  system_stopped: "&aAirdrop system stopped."
+  system_stopped_manual: "&aAirdrops manually spawned have been removed."
+  player_not_found: "&cPlayer not found or offline."
+  spawned_at_player: "&aSpawned airdrop at player %player%."
+  spawned_at_player_with_table: "&aSpawned airdrop at player %player% using loot table %table%."
+  spawned_at_coords: "&aSpawned airdrop at %x%, %y%, %z%."
+  spawned_at_coords_with_table: "&aSpawned airdrop at %x%, %y%, %z% using loot table %table%."
+  invalid_world: "&cInvalid world specified in config."
+  invalid_coordinates: "&cInvalid coordinates."
+  usage_spawn: "&eUsage: /airdrop spawn <player> [lootTable] OR /airdrop spawn <x> <y> <z> [lootTable]"
+  reload_success: "&aConfig and loot reloaded."
+  status: "&6Airdrop running: %status%"
+  unknown_command: "&eUnknown subcommand."
+  no_permission: "&cYou don't have permission for this command."
+  available_commands_header: "&eAvailable commands:"
+  command_usage_format: "&7%usage%"
+  airdrop_locate_hint: "&eUse /airdrop locate with a compass in your inventory to find it!"
+  spawn_capacity_full: "&cCannot spawn airdrop: maximum concurrent airdrops reached."
+  list_empty: "&eNo active airdrops."
+  list_header: "&6Active airdrops (%count%):"
+  list_item: "&7- %world% @ %x%, %y%, %z% &8[%state%] &7locked:%locked% &a(table:%table%)"
+  usage_clear: "&eUsage: /airdrop clear <nearest|x y z>"
+  clear_player_only_nearest: "&cOnly players can clear the nearest airdrop."
+  cleared_nearest: "&aCleared nearest airdrop at %x%, %y%, %z%."
+  cleared_at_coords: "&aCleared airdrop at %x%, %y%, %z%."
+  clear_not_found: "&cNo airdrop found at those coordinates."
+  loot_table_not_found: "&cLoot table '%table%' not found. Use TAB to see available tables."
+  spawn_on_cooldown: "&cYou must wait %seconds%s before spawning another airdrop."
+  manual_spawn_out_of_bounds: "&cThat location is outside the allowed spawn radius (%radius%)."
+  manual_spawn_world_restricted: "&cYou cannot spawn airdrops in this world."

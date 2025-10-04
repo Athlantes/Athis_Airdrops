@@ -1,0 +1,86 @@
+name: AthisAirdrops
+version: '0.4.0'
+main: org.athlantes.athiSAirdrops.AthiSAirdrops
+api-version: '1.21'
+load: POSTWORLD
+authors: [ Athlantes ]
+description: A plugin that spawns configurable airdrops.
+softdepend:
+  - ItemsAdder
+  - MMOItems
+  - Nexo
+
+commands:
+  airdrop:
+    description: Manage airdrops
+    usage: /<command> <locate|start|stop|spawn|reload|status|list|clear>
+    permission: athisairdrops.command
+
+permissions:
+  athisairdrops.command:
+    description: Base permission to use /airdrop root command (needed for any subcommand)
+    default: true
+
+  athisairdrops.locate:
+    description: Use /airdrop locate (receive hint / compass updates)
+    default: true
+  athisairdrops.start:
+    description: Start automatic airdrops
+    default: op
+  athisairdrops.stop:
+    description: Stop automatic airdrops and clear running tasks
+    default: op
+  athisairdrops.spawn.player:
+    description: Spawn an airdrop at a player
+    default: op
+  athisairdrops.spawn.coords:
+    description: Spawn an airdrop at explicit coordinates
+    default: op
+  athisairdrops.list:
+    description: List active and falling airdrops
+    default: true
+  athisairdrops.clear:
+    description: Clear (remove) an airdrop (nearest or at coords)
+    default: op
+  athisairdrops.reload:
+    description: Reload plugin configuration and loot tables
+    default: op
+  athisairdrops.status:
+    description: View current running status of auto airdrops
+    default: true
+  athisairdrops.compass:
+    description: Use compass right-click tracking feature for airdrops
+    default: true
+  athisairdrops.bypass.lock:
+    description: Open locked airdrop chests before unlock timer expires
+    default: op
+  athisairdrops.bypass.protect:
+    description: Break protected airdrop chests directly
+    default: op
+  athisairdrops.bypass.cooldown:
+    description: Bypass spawn command cooldown
+    default: op
+  athisairdrops.voucher:
+    description: Redeem special airdrop voucher / reward items (global gate; item may add extra perms)
+    default: true
+
+  athisairdrops.spawn:
+    description: Spawn an airdrop (player or coords)
+    default: op
+    children:
+      athisairdrops.spawn.player: true
+      athisairdrops.spawn.coords: true
+
+  athisairdrops.admin:
+    description: Convenience umbrella permission for all administrative actions
+    default: op
+    children:
+      athisairdrops.start: true
+      athisairdrops.stop: true
+      athisairdrops.spawn: true
+      athisairdrops.clear: true
+      athisairdrops.reload: true
+      athisairdrops.bypass.lock: true
+      athisairdrops.bypass.protect: true
+      athisairdrops.bypass.cooldown: true
+      athisairdrops.status: true

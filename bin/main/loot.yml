@@ -1,0 +1,63 @@
+common_lootcrate:
+  chance: 0.7  # 70% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    iron_ingot:
+      material: IRON_INGOT
+      min: 3
+      max: 8
+      chance: 0.8
+  commands:
+    creative:
+      name: "Creative Gamemode"
+      command: "gamemode creative %player%"
+      chance: 1
+      lore:
+        - "&eGives you Creative!"
+        - "&7Right Click to redeem"
+
+uncommon_drop:
+  chance: 0.3  # 30% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    diamond_sword:
+      material: DIAMOND_SWORD
+      min: 1
+      max: 1
+      chance: 0.4
+      enchantments:
+        SHARPNESS: 3
+        UNBREAKING: 2
+    golden_apple:
+      material: GOLDEN_APPLE
+      min: 1
+      max: 2
+      chance: 0.5
+  itemsadder_loot:
+    banana:
+      material: "iasurvival:banana"
+      min: 1
+      max: 1
+      chance: 0.6
+
+test_drop:
+  chance: 0.1  # 10% chance to pick this loot table
+  min-items: 1
+  max-items: 5
+  loot:
+    enchanted_bow:
+      material: BOW
+      min: 1
+      max: 1
+      chance: 0.5
+      enchantments:
+        POWER: 4
+        UNBREAKING: 3
+  itemsadder_loot:
+    red_bow:
+      material: "iasurvival:red_bow"
+      min: 1
+      max: 1
+      chance: 0.1

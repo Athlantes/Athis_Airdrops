@@ -1,0 +1,62 @@
+#Automatic start airdrops at server start (no need to run /airdrop start)
+autostart: false
+
+spawn_interval_seconds: 240 #Time between airdrops
+time-before-despawn: 120 #Airdrop duration
+
+world: world
+center_x: 0
+center_z: 0
+spawn_radius: 1000
+max_location_attempts: 100
+min_players_to_spawn: 3 #Numbers of players needed online for airdrops to spawn
+
+#Airdrops will spawn only in chunks where are at least one player.
+spawn_in_loaded_chunks_only: false
+#Load the chunk where is the airdrop if no player is there (best with spawn_in_loaded_chunks_only: false)
+load_generated_chunk_if_unloaded: true
+
+replace_existing_block: true
+particle_interval_ticks: 10
+
+#Compass system | Players can right-click with a compass to get an approximate location to the airdrop
+enable-compass: true
+compass-cooldown: 10 # cooldown in seconds
+
+#Lock system | Players need to wait some time before they can loot the chest
+lock-airdrop: true
+time-before-unlock: 30 # in seconds
+
+# Hologram options - Don't modify if you don't know what you do
+hologram:
+  create_delay_ticks: 2
+  spawn_retries: 3
+  retry_delay_ticks: 10
+
+messages:
+  airdrop_spawned: "[Airdrop] Something has fallen in the %biome%, roughly %distance% blocks from you..."
+  airdrop_despawned: "[Airdrop]§e Airdrop at %x%, %z% has despawned."
+  chest_protected: "[Airdrop]§c This chest cannot be broken!"
+  chest_empty_notice: "[Airdrop]§e That airdrop is empty."
+  compass_cooldown: "&cPlease wait %seconds% seconds before using the compass again."
+  no_active_airdrop: "&eThere is no active airdrop currently."
+  compass_location: "&aAirdrop is roughly %distance% blocks %direction% from you."
+  chest_locked: "&cThis airdrop chest is locked. Please wait a bit."
+  autostart: "&aAirdrop system auto-started."
+  system_already_running: "&cAirdrop system already running."
+  system_not_running: "&cAirdrop system not running."
+  system_stopped: "&aAirdrop system stopped."
+  system_stopped_manual: "&aAirdrops manually spawned have been removed."
+  player_not_found: "&cPlayer not found or offline."
+  spawned_at_player: "&aSpawned airdrop at player %player%."
+  spawned_at_coords: "&aSpawned airdrop at %x%, %y%, %z%."
+  invalid_world: "&cInvalid world specified in config."
+  invalid_coordinates: "&cInvalid coordinates."
+  usage_spawn: "&eUsage: /airdrop spawn <player> OR /airdrop spawn <x> <y> <z>"
+  reload_success: "&aConfig and loot reloaded."
+  status: "&6Airdrop running: %status%"
+  unknown_command: "&eUnknown subcommand."
+  no_permission: "&cYou don't have permission for this command."
+  available_commands_header: "&eAvailable commands:"
+  command_usage_format: "&7%usage%"
+  airdrop_locate_hint: "&eRight Click with a compass in your inventory to find it!"

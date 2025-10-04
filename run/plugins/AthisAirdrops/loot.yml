@@ -1,0 +1,56 @@
+common_lootcrate:
+  chance: 0.7  # 70% chance to pick this loot table
+  loot:
+    iron_ingot:
+      material: IRON_INGOT
+      min: 3
+      max: 8
+      weight: 2
+      chance: 0.8
+
+
+uncommon_drop:
+  chance: 0.3  # 30% chance to pick this loot table
+  loot:
+    diamond_sword:
+      material: DIAMOND_SWORD
+      min: 1
+      max: 1
+      weight: 2
+      chance: 0.4
+      enchantments:
+        SHARPNESS: 3
+        UNBREAKING: 2
+    golden_apple:
+      material: GOLDEN_APPLE
+      min: 1
+      max: 2
+      weight: 3
+      chance: 0.5
+  itemsadder_loot:
+    basalt_delta_cubee:
+      material: "cubees:cubees-icon-basalt_delta_cubee"
+      min: 1
+      max: 1
+      weight: 1
+      chance: 0.6
+
+test_drop:
+  chance: 0.1  # 10% chance to pick this loot table
+  loot:
+    enchanted_bow:
+      material: BOW
+      min: 1
+      max: 1
+      weight: 1
+      chance: 0.5
+      enchantments:
+        POWER: 4
+        UNBREAKING: 3
+  itemsadder_loot:
+    blackstone_cubee:
+      material: "cubees:cubees-icon-blackstone_cubee"
+      min: 1
+      max: 1
+      weight: 1
+      chance: 0.1

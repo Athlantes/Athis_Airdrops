@@ -1,0 +1,19 @@
+name: AthisAirdrops
+version: '0.1.4'
+main: org.athlantes.athiSAirdrops.AthiSAirdrops
+api-version: '1.21'
+load: STARTUP
+authors: [ Athlantes ]
+description: A plugin that spawns configurable airdrops.
+softdepend:
+  - ItemsAdder
+
+commands:
+  airdrop:
+    description: Manage airdrops
+    usage: /<command> <locate|start|stop|spawn|reload|status>
+
+permissions:
+  athisairdrops.admin:
+    description: Allows access to admin airdrop commands
+    default: op
